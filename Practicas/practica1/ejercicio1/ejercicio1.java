@@ -1,5 +1,7 @@
 package practica1.ejercicio1;
 
+import java.util.Scanner;
+
 public class ejercicio1 {
 	
 	private static void NumerosEntreConFor(int x, int y) {
@@ -28,8 +30,14 @@ public class ejercicio1 {
 	}
 	
 	public static void main(String[] args) {
-		int x = 10;
-		int y = 20;
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("ingrese numero menor: ");
+		
+		int x = scanner.nextInt();
+		System.out.println("ingrese numero mayor: ");
+		int y = scanner.nextInt();
+		
+		scanner.close();
 		
 		if (x > y) {
 			int a = y;
