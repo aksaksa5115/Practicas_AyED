@@ -1,5 +1,7 @@
 package practica1.ejercicio2;
 
+import java.util.Scanner;
+
 public class ejercicio2 {
 	
 
@@ -14,8 +16,13 @@ public class ejercicio2 {
 	}
 	
 	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("ingrese numero:");
+		int N = scanner.nextInt();
+		
 	
-		int[] multiplos = Multiplos(10);
+		int[] multiplos = Multiplos(N);
 		
 		for (int num : multiplos) {
 			System.out.println(num + " ");
