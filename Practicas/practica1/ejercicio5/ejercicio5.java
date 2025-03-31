@@ -8,13 +8,13 @@ public class ejercicio5 {
 		int min = Integer.MAX_VALUE;
 		int prom = 0;
 		for (int i=0; i<(numeros.length); i++){
-			if (i<min)
-				min = i;
-			if (i>max)
-				max = i;
-			prom+= i;
+			if (numeros[i]>min)
+				min = numeros[i];
+			if (numeros[i]<max)
+				max = numeros[i];
+			prom+= numeros[i];
 		}
-		return new int[] {max, min, prom};
+		return new int[] {min, max, prom/numeros.length};
 	}
 	
 	public static datos puntoB(int[] numeros) {
@@ -22,13 +22,13 @@ public class ejercicio5 {
 		int min = Integer.MAX_VALUE;
 		int prom = 0;
 		for (int i=0; i<(numeros.length); i++){
-			if (i<min)
-				min = i;
-			if (i>max)
-				max = i;
-			prom+= i;
+			if (numeros[i]<min)
+				min = numeros[i];
+			if (numeros[i]>max)
+				max = numeros[i];
+			prom+= numeros[i];
 		}
-		return new datos(max, min, prom);
+		return new datos(min, max, prom/numeros.length);
 	}
 	
 	public static void puntoC(int[] numeros) {
@@ -36,13 +36,13 @@ public class ejercicio5 {
 		int min = Integer.MAX_VALUE;
 		int prom = 0;
 		for (int i=0; i<(numeros.length); i++){
-			if (i<min)
-				min = i;
-			if (i>max)
-				max = i;
-			prom+= i;
+			if (numeros[i]>min)
+				min = numeros[i];
+			if (numeros[i]<max)
+				max = numeros[i];
+			prom+= numeros[i];
 		}
-		da = new datos(max, min, prom);
+		da = new datos(min, max, prom/numeros.length);
 	}
 
 	
@@ -50,16 +50,11 @@ public class ejercicio5 {
 		
 		int [] numeros = new int[] {4, 56, 13, 756, 84, 354, 11, 55, 66, 91};
 		
-		datos d = new datos();
-		
 		puntoA(numeros);
 		
-		puntoB(numeros);
+		System.out.print(puntoB(numeros).toString());
 		
 		puntoC(numeros);
-		
-		
-		
 
 	}
 

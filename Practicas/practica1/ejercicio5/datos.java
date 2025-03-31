@@ -30,6 +30,13 @@ public class datos {
 	public void setProm(double prom) {
 		this.prom = prom;
 	}
+
+	@Override
+	public String toString() {
+		return "datos [min=" + min + ", max=" + max + ", prom=" + prom + "]";
+	}
+	
+	
 	
 	
 }
