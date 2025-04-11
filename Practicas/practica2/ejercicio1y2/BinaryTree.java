@@ -71,6 +71,12 @@ public class BinaryTree <T> {
     public String toString() {
         return this.getData().toString();
     }
+    
+    public void imprimirArbol() {
+        if(this.hasLeftChild()) this.getLeftChild().imprimirArbol();
+        System.out.print(this.getData() + " ");
+        if(this.hasRightChild()) this.getRightChild().imprimirArbol();
+    }
     //-------------------------EJERCICIO 2---------------------------
     
     public int contarHojas() {
