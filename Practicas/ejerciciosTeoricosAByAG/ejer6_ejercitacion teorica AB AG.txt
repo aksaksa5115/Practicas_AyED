@@ -1,0 +1,18 @@
+6.-  Elija la expresión algebraica almacenada en el siguiente árbol: 
+
+					+
+
+			/				*
+
+		-		c		d		e
+	a		b
+
+
+a) ((a – b / c) + d * e) 
+b) (((a – b) / (c + d)) + d * e) 
+c) ((a – b / c) + (d * e)) 
+d) (((a – b) / c) + (d * e))
+
+RESPUESTA CORRECTA: D
+
+lean el arbol en POSTORDEN para resolver estos ejercicios 

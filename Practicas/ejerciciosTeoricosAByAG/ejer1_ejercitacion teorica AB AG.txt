@@ -1,0 +1,109 @@
+1.- Dado un árbol binario T cuyo recorrido postorden es A G F E B J I H C D y su recorrido inorden es 
+A B G E F D J H I C ¿cuántos son los descendientes del nodo “C”?
+ChatGPT
+Para determinar cuántos son los descendientes del nodo “C” en un árbol binario, es necesario reconstruir el árbol binario a partir de sus recorridos postorden e inorden.
+
+Pasos para la Reconstrucción del Árbol
+Identificar la raíz del árbol: La raíz del árbol es el último nodo en el recorrido postorden.
+Dividir el recorrido inorden: Utilizando la raíz, dividir el recorrido inorden en subárboles izquierdo y derecho.
+Construir los subárboles: Repetir el proceso recursivamente para los subárboles izquierdo y derecho.
+Recorridos Dados
+Postorden: A G F E B J I H C D
+Inorden: A B G E F D J H I C
+Paso 1: Identificar la Raíz del Árbol
+La raíz del árbol es el último nodo del recorrido postorden:
+
+Raíz: D
+Paso 2: Dividir el Inorden por la Raíz
+Dividir el recorrido inorden por el nodo raíz D:
+
+Inorden Izquierdo: A B G E F
+Inorden Derecho: J H I C
+Paso 3: Construir el Árbol Recursivamente
+Subárbol Izquierdo de D
+Postorden Izquierdo: A G F E B
+
+Inorden Izquierdo: A B G E F
+
+Raíz del subárbol izquierdo: B (último nodo del postorden izquierdo)
+
+Subárbol Izquierdo de B
+Postorden Izquierdo: A (solo un nodo, es una hoja)
+
+Inorden Izquierdo: A (solo un nodo, es una hoja)
+
+Subárbol Derecho de B
+Postorden Derecho: G F E (nodos restantes del postorden izquierdo)
+
+Inorden Derecho: G E F
+
+Raíz del subárbol derecho de B: E (último nodo del postorden derecho)
+
+Subárbol Izquierdo de E
+Postorden Izquierdo: G (solo un nodo, es una hoja)
+
+Inorden Izquierdo: G (solo un nodo, es una hoja)
+
+Subárbol Derecho de E
+Postorden Derecho: F (solo un nodo, es una hoja)
+
+Inorden Derecho: F (solo un nodo, es una hoja)
+
+Subárbol Derecho de D
+Postorden Derecho: J I H C (nodos restantes del postorden)
+
+Inorden Derecho: J H I C
+
+Raíz del subárbol derecho: C (último nodo del postorden derecho)
+
+Subárbol Izquierdo de C
+Postorden Izquierdo: J I H
+
+Inorden Izquierdo: J H I
+
+Raíz del subárbol izquierdo de C: I (último nodo del postorden izquierdo)
+
+Subárbol Izquierdo de I
+Postorden Izquierdo: J H
+
+Inorden Izquierdo: J H
+
+Raíz del subárbol izquierdo de I: H (último nodo del postorden izquierdo)
+
+####### Subárbol Izquierdo de H
+
+Postorden Izquierdo: J (solo un nodo, es una hoja)
+
+Inorden Izquierdo: J (solo un nodo, es una hoja)
+
+####### Subárbol Derecho de H
+
+No hay nodos restantes (es una hoja)
+
+Subárbol Derecho de I
+No hay nodos restantes (es una hoja)
+
+Subárbol Derecho de C
+No hay nodos restantes (es una hoja)
+
+Estructura del Árbol
+mathematica
+Copiar código
+          D
+         / \
+        B   C
+       / \   \
+      A   E   I
+         / \ / 
+        G  F H
+              \
+               J
+Número de Descendientes del Nodo "C"
+Ahora que hemos reconstruido el árbol, podemos contar los descendientes del nodo "C":
+
+Hijo izquierdo de C: I
+Hijo izquierdo de I: H
+Hijo derecho de H: J
+Los descendientes de "C" son I, H, y J.
+
+Por lo tanto, el nodo "C" tiene 3 descendientes.

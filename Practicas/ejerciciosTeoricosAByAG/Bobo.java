@@ -1,0 +1,11 @@
+package ejerciciosTeoricosAByAG;
+
+public class Bobo {
+
+	public static void main(String[] args) {
+		// JAVA ME PONE EL PAQUETE EN BLANCO Y COMO SI NO EXISTIERA SI NO HAY ALGUN ARCHIVO DENTRO, LOS TXT NO CUENTAN
+		// Y NOSE COMO ARREGLAR ESO DIOS SEGURO QUE ES LA PORONGA DE ECLIPSE
+
+	}
+
+}

@@ -1,0 +1,59 @@
+2.- Defina árbol binario completo y árbol binario lleno. Ejemplifique. ¿Es verdad que todo árbol 
+binario completo es lleno? ¿Y viceversa?
+
+ChatGPT
+Definiciones
+Árbol Binario Completo
+Un árbol binario completo es un árbol en el cual todos los niveles están completamente llenos, excepto posiblemente el último nivel, el cual está lleno desde la izquierda. En otras palabras, cada nivel, excepto posiblemente el último, tiene el número máximo de nodos posibles, y todos los nodos en el último nivel están lo más a la izquierda posible.
+
+Ejemplo de Árbol Binario Completo:
+
+markdown
+Copiar código
+        1
+       / \
+      2   3
+     / \ / 
+    4  5 6  
+En este árbol, todos los niveles están llenos excepto el último, y los nodos del último nivel (nodos 4, 5 y 6) están lo más a la izquierda posible.
+
+Árbol Binario Lleno (Perfecto)
+Un árbol binario lleno, también conocido como árbol binario perfecto, es un árbol en el cual todos los niveles están completamente llenos. Esto significa que todos los nodos tienen dos hijos (excepto los nodos hoja que no tienen hijos) y todos los nodos hoja están en el mismo nivel.
+
+Ejemplo de Árbol Binario Lleno:
+
+markdown
+Copiar código
+        1
+       / \
+      2   3
+     / \ / \
+    4  5 6  7
+En este árbol, todos los niveles están completamente llenos y todos los nodos hoja (nodos 4, 5, 6 y 7) están en el mismo nivel.
+
+Relación entre Árbol Binario Completo y Árbol Binario Lleno
+Todo árbol binario lleno es completo:
+Sí, esta afirmación es verdadera. Un árbol binario lleno (perfecto) tiene todos los niveles completamente llenos, lo cual cumple con la definición de un árbol binario completo.
+
+Todo árbol binario completo es lleno:
+No, esta afirmación es falsa. Un árbol binario completo puede tener el último nivel no completamente lleno, siempre y cuando los nodos estén lo más a la izquierda posible. Esto no cumple con la definición de un árbol binario lleno, donde todos los niveles deben estar completamente llenos.
+
+Ejemplo donde un árbol binario es completo pero no lleno:
+
+markdown
+Copiar código
+        1
+       / \
+      2   3
+     / \ 
+    4  5 
+En este ejemplo, el árbol es completo porque todos los niveles están completamente llenos excepto el último, y los nodos en el último nivel están lo más a la izquierda posible. Sin embargo, no es lleno porque el último nivel no está completamente lleno (faltan nodos después del nodo 5).
+
+Resumen
+Árbol Binario Completo: Todos los niveles están completamente llenos, excepto posiblemente el último, que está lleno desde la izquierda.
+
+Árbol Binario Lleno: Todos los niveles están completamente llenos.
+
+Todo árbol binario lleno es completo.
+
+No todo árbol binario completo es lleno.

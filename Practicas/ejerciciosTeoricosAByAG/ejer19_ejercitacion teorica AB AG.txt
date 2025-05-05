@@ -1,0 +1,16 @@
+19.- Un árbol general lleno de grado 4, tiene 21 nodos. 
+a) ¿Cuál es la altura del árbol? 
+b) Desarrolle el proceso realizado para obtener la respuesta anterior
+
+
+aca usamos la formulita esa que nos indica cuantos nodos tiene un arbol lleno
+
+para hacer esto mas rapido voy a reemplazar los valores directamente
+
+21 = (4^(h+1) - 1) / (4 - 1)
+21 = (4^(h+1) - 1) / 3
+21 * 3 = (4^(h+1) - 1
+63 + 1 = 4^(h+1)
+64 = 4^(h+1) ---------> aca podriamos seguir desarrollando, pero usemos la cabeza y pensemos, 4 elevado a que numero te da 64? el 3
+64 = 4^(2+1)
+[h = 2]

@@ -1,0 +1,47 @@
+13.- Reconstruya  el  árbol  binario  T  cuyo  recorrido  preorden   es  2 5 3 9 7 1 6 4 8   y su recorrido 
+inorden   es   9 3 7 5 1 2 6 8 4.
+
+me hice el pelotudo con los arboles anteriores, y ahora tengo que hacer esta poronga
+
+primero aclaremos unas cosas
+
+Preorden: 2 5 3 9 7 1 6 4 8
+Orden: raíz –> izquierda –> derecha
+
+Inorden: 9 3 7 5 1 2 6 8 4
+Orden: izquierda –> raíz –> derecha
+
+ya podemos decir que la raiz de todo es el 2
+
+y que en el inorden, todo lo que este a la izquierda del 2 es el subarbol izquierdo, y lo que este a la derecha es el subarbol derecho
+
+subarbol izquierdo
+9 3 7 5 1 
+
+subarbol derecho
+6 8 4
+
+podemos repetir este proceso de saber la raiz todo el tiempo hasta completar el arbol
+
+subarbol izquierdo
+
+inorden
+9 3 7 5 1
+
+preorden 5 3 9 7 1
+
+la raiz es el 5, el 1 va a la derecha y el resto a la izquierda
+
+subsubarbol izquierdo
+9 3 7
+
+subsubarbol derecho
+1
+
+y asi todo el rato, voy a resumir esto porque va a quedar larguisimo si no
+
+				2
+			5		6
+				1		4
+		3			8
+	9		7

@@ -1,0 +1,74 @@
+10.- Construya el árbol de expresión correspondiente a la siguiente expresión prefija
++ + a e / * - b c d f
+ChatGPT
+Para construir el árbol de expresión correspondiente a la expresión prefija + + a e / * - b c d f, debemos seguir estos pasos:
+
+Comprender la estructura de la expresión prefija.
+Construir el árbol de expresión a partir de la expresión prefija.
+Paso 1: Comprender la Estructura de la Expresión Prefija
+La expresión prefija se procesa de derecha a izquierda, empujando operandos a una pila y creando subárboles cuando se encuentra un operador.
+
+Paso 2: Construir el Árbol de Expresión a partir de la Expresión Prefija
+Usando una pila para construir el árbol de expresión:
+
+Inicializamos una pila vacía.
+Procesamos cada símbolo de la expresión prefija de derecha a izquierda:
+Si es un operando, creamos un nodo y lo empujamos a la pila.
+Si es un operador, sacamos los dos nodos de la pila, creamos un nuevo nodo con el operador, y establecemos estos dos nodos como hijos del nuevo nodo (el primero como hijo izquierdo y el segundo como hijo derecho). Luego, empujamos el nuevo nodo de vuelta a la pila.
+Proceso paso a paso:
+
+Leer f: Operando, crear nodo y empujar a la pila.
+
+Pila: [f]
+Leer d: Operando, crear nodo y empujar a la pila.
+
+Pila: [d, f]
+Leer /: Operador, sacar d y f, crear nodo / con hijos d y f, empujar a la pila.
+
+Pila: [/] (donde / tiene hijos d y f)
+Leer c: Operando, crear nodo y empujar a la pila.
+
+Pila: [c, /]
+Leer b: Operando, crear nodo y empujar a la pila.
+
+Pila: [b, c, /]
+Leer -: Operador, sacar b y c, crear nodo - con hijos b y c, empujar a la pila.
+
+Pila: [-, /] (donde - tiene hijos b y c)
+Leer *: Operador, sacar - y /, crear nodo * con hijos - y /, empujar a la pila.
+
+Pila: [*] (donde * tiene hijos - y /)
+Leer e: Operando, crear nodo y empujar a la pila.
+
+Pila: [e, *]
+Leer a: Operando, crear nodo y empujar a la pila.
+
+Pila: [a, e, *]
+Leer +: Operador, sacar a y e, crear nodo + con hijos a y e, empujar a la pila.
+
+Pila: [+, *] (donde + tiene hijos a y e)
+Leer +: Operador, sacar + y *, crear nodo + con hijos + y *, empujar a la pila.
+
+Pila: [+] (donde + tiene hijos + y *)
+Construcción del Árbol
+Al final del proceso, la pila contiene solo un nodo, que es la raíz del árbol de expresión.
+
+El árbol de expresión es:
+
+javascript
+Copiar código
+          +
+       /    \
+      +      *
+     / \     / \
+    a   e   -   /
+           / \ / \
+          b   c d  f
+El nodo raíz es +.
+El hijo izquierdo del raíz es el nodo +.
+Este + tiene como hijo izquierdo a y como hijo derecho e.
+El hijo derecho del raíz es el nodo *.
+Este * tiene como hijo izquierdo el nodo - y como hijo derecho el nodo /.
+Este - tiene como hijo izquierdo b y como hijo derecho c.
+Este / tiene como hijo izquierdo d y como hijo derecho f.
+Así es como se ve el árbol de expresión construido a partir de la expresión prefija + + a e / * - b c d f

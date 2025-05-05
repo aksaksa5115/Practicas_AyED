@@ -1,0 +1,28 @@
+7.- ¿Cuál es el número mínimo de nodos en un árbol binario completo de altura 4?  
+(a) 10 
+(b) 15 
+(c) 12 
+(d) 31 
+(e) 16
+
+formula para resolver estas boludeces
+para saber la cantidad minima de nodos en un arbol completo
+usamos esta formula:
+
+[2^h] = cantidad minima de nodos en un arbol completo de altura h
+(la cantidad minima hace referencia a que en el ultimo nivel del arbol, puede no estar completo, si fuera completo
+ se le puede aplicar la formula de cantidad de nodos en un arbol lleno)
+
+[2^(h+1) - 1] = cantidad de nodos en un arbol lleno de altura h
+
+
+h = altura
+
+nosotros tenemos un arbol completo pero no lleno de altura 4
+entonces la cantidad minima es
+
+2^4 = 16
+
+RESPUESTA CORRECTA: e
+
+

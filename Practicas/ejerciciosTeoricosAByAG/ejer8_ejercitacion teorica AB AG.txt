@@ -1,0 +1,69 @@
+8.- Construya el árbol de expresión correspondiente a la siguiente expresión postfija.
+6 5 * 7 3 − 4 8 * + +
+
+ChatGPT
+Para construir el árbol de expresión correspondiente a la expresión postfija 6 5 * 7 3 − 4 8 * + +, debemos seguir el proceso de evaluación de expresiones postfijas usando una pila, pero en lugar de calcular los valores, construiremos nodos de un árbol binario.
+
+Proceso de Construcción del Árbol de Expresión
+Inicialización: Usar una pila vacía.
+
+Lectura de la expresión: Leer cada símbolo de izquierda a derecha.
+
+Operaciones:
+
+Si el símbolo es un operando (número), crear un nodo y empujarlo a la pila.
+Si el símbolo es un operador, sacar los dos nodos de la parte superior de la pila, crear un nuevo nodo con el operador, y establecer estos dos nodos como hijos del nuevo nodo (el primero como hijo derecho y el segundo como hijo izquierdo). Luego, empujar el nuevo nodo de vuelta a la pila.
+Evaluación de la Expresión 6 5 * 7 3 - 4 8 * + +
+Leer 6: Es un operando, crear un nodo y empujar a la pila.
+
+Pila: [6]
+Leer 5: Es un operando, crear un nodo y empujar a la pila.
+
+Pila: [6, 5]
+Leer *: Es un operador, sacar los dos nodos (6 y 5), crear un nuevo nodo * con hijos 6 y 5, y empujarlo a la pila.
+
+Pila: [*] (donde * tiene hijos 6 y 5)
+Leer 7: Es un operando, crear un nodo y empujar a la pila.
+
+Pila: [*], [7]
+Leer 3: Es un operando, crear un nodo y empujar a la pila.
+
+Pila: [*], [7], [3]
+Leer -: Es un operador, sacar los dos nodos (7 y 3), crear un nuevo nodo - con hijos 7 y 3, y empujarlo a la pila.
+
+Pila: [*], [-] (donde - tiene hijos 7 y 3)
+Leer 4: Es un operando, crear un nodo y empujar a la pila.
+
+Pila: [*], [-], [4]
+Leer 8: Es un operando, crear un nodo y empujar a la pila.
+
+Pila: [*], [-], [4], [8]
+Leer *: Es un operador, sacar los dos nodos (4 y 8), crear un nuevo nodo * con hijos 4 y 8, y empujarlo a la pila.
+
+Pila: [*], [-], [*] (donde * tiene hijos 4 y 8)
+Leer +: Es un operador, sacar los dos nodos ([-] y [*]), crear un nuevo nodo + con hijos [-] y [*], y empujarlo a la pila.
+
+Pila: [*], [+] (donde + tiene hijos [-] y [*])
+Leer +: Es un operador, sacar los dos nodos ([*] y [+]), crear un nuevo nodo + con hijos [*] y [+], y empujarlo a la pila.
+
+Pila: [+] (donde + tiene hijos [*] y +)
+Construcción del Árbol
+Al final del proceso, la pila contiene solo un nodo, que es la raíz del árbol de expresión.
+
+El árbol de expresión es:
+
+javascript
+Copiar código
+        +
+       /   \
+      *     +
+     / \   /  \
+    6  5  -    *
+         / \  / \
+        7   3 4  8
+El nodo raíz es +.
+El hijo izquierdo de la raíz es el nodo * con hijos 6 y 5.
+El hijo derecho de la raíz es el nodo +.
+Este + tiene como hijo izquierdo el nodo - con hijos 7 y 3.
+Este + tiene como hijo derecho el nodo * con hijos 4 y 8.
+Así es como se ve el árbol de expresión construido a partir de la expresión postfija 6 5 * 7 3 − 4 8 * + +.

@@ -1,0 +1,97 @@
+9.- Construya el árbol de expresión correspondiente a la siguiente expresión 
+infija. ( A + ( B * C ) ) * ( D – E )
+
+ChatGPT
+Para construir el árbol de expresión correspondiente a la expresión infija ( A + ( B * C ) ) * ( D – E ), debemos seguir estos pasos:
+
+Convertir la expresión infija a postfija.
+Construir el árbol de expresión a partir de la expresión postfija.
+Paso 1: Convertir la Expresión Infija a Postfija
+La expresión infija dada es ( A + ( B * C ) ) * ( D – E ).
+
+Usando el algoritmo de Shunting Yard para convertir la expresión infija a postfija:
+
+Inicializamos una pila para operadores y una lista para la salida.
+Procesamos cada símbolo de izquierda a derecha:
+Si es un operando, lo añadimos a la salida.
+Si es un operador, lo empujamos a la pila, pero antes sacamos cualquier operador de mayor o igual precedencia de la pila y lo añadimos a la salida.
+Si es un paréntesis izquierdo (, lo empujamos a la pila.
+Si es un paréntesis derecho ), sacamos todos los operadores de la pila hasta encontrar un paréntesis izquierdo (.
+Proceso paso a paso:
+
+( A + ( B * C ) ) * ( D – E )
+( se empuja a la pila.
+A se añade a la salida.
++ se empuja a la pila.
+( se empuja a la pila.
+B se añade a la salida.
+* se empuja a la pila.
+C se añade a la salida.
+) causa que * se añada a la salida y ( se elimine de la pila.
+) causa que + se añada a la salida y ( se elimine de la pila.
+* se empuja a la pila.
+( se empuja a la pila.
+D se añade a la salida.
+- se empuja a la pila.
+E se añade a la salida.
+) causa que - se añada a la salida y ( se elimine de la pila.
+Finalmente, * se añade a la salida.
+La expresión postfija es: A B C * + D E - *
+
+Paso 2: Construir el Árbol de Expresión a partir de la Expresión Postfija
+Usando una pila para construir el árbol de expresión:
+
+Inicializamos una pila vacía.
+Procesamos cada símbolo de la expresión postfija de izquierda a derecha:
+Si es un operando, creamos un nodo y lo empujamos a la pila.
+Si es un operador, sacamos los dos nodos de la pila, creamos un nuevo nodo con el operador, y establecemos estos dos nodos como hijos del nuevo nodo (el primero como hijo derecho y el segundo como hijo izquierdo). Luego, empujamos el nuevo nodo de vuelta a la pila.
+Proceso paso a paso:
+
+Leer A: Operando, crear nodo y empujar a la pila.
+
+Pila: [A]
+Leer B: Operando, crear nodo y empujar a la pila.
+
+Pila: [A, B]
+Leer C: Operando, crear nodo y empujar a la pila.
+
+Pila: [A, B, C]
+Leer *: Operador, sacar B y C, crear nodo * con hijos B y C, empujar a la pila.
+
+Pila: [A, *] (donde * tiene hijos B y C)
+Leer +: Operador, sacar A y *, crear nodo + con hijos A y *, empujar a la pila.
+
+Pila: [+] (donde + tiene hijos A y *)
+Leer D: Operando, crear nodo y empujar a la pila.
+
+Pila: [+, D]
+Leer E: Operando, crear nodo y empujar a la pila.
+
+Pila: [+, D, E]
+Leer -: Operador, sacar D y E, crear nodo - con hijos D y E, empujar a la pila.
+
+Pila: [+, -] (donde - tiene hijos D y E)
+Leer *: Operador, sacar + y -, crear nodo * con hijos + y -, empujar a la pila.
+
+Pila: [*] (donde * tiene hijos + y -)
+Construcción del Árbol
+Al final del proceso, la pila contiene solo un nodo, que es la raíz del árbol de expresión.
+
+El árbol de expresión es:
+
+markdown
+Copiar código
+        *
+       / \
+      +   -
+     / \ / \
+    A  * D  E
+      / \
+     B   C
+El nodo raíz es *.
+El hijo izquierdo del raíz es el nodo +.
+Este + tiene como hijo izquierdo A y como hijo derecho el nodo *.
+Este * tiene como hijo izquierdo B y como hijo derecho C.
+El hijo derecho del raíz es el nodo -.
+Este - tiene como hijo izquierdo D y como hijo derecho E.
+Así es como se ve el árbol de expresión construido a partir de la expresión infija ( A + ( B * C ) ) * ( D – E ).

@@ -1,0 +1,67 @@
+
+11.- Obtenga la expresión prefija de la siguiente expresión postfija:
+
+ A  B  C  *  D  -  E  F  /  G  /  -  * 
+
+primero hay que aclarar unas cosas
+En notación postfija: Operandos vienen antes que el operador
+
+En notación prefija: El operador viene antes que los operandos
+
+la logica para resolverlo es como siempre, se usa una pila, se lee de izquierda a derecha
+si es un numero, push, si es un operador, pop a los ultimos 2 numeros
+y despues vamos armando la expresion con el siguiente formato: operador, numero_1, numero_2
+y pusheamos la nueva expresion a la pila
+
+paso 1 (A)
+
+A
+
+paso 2 (B)
+
+A B
+
+paso 3 (C)
+
+A B C
+
+paso 4 (*)
+construimos expresion: * B C -----> la devolvemos a la pila
+A * B C
+
+paso 5 (D)
+
+A * B C D
+
+paso 6 (-)
+construimos expresion: - * B C D -------> la devolvemos a la pila
+A - * B C D
+
+paso 7 (E)
+
+A - * B C D E
+
+paso 8 (F)
+
+A - * B C D E F
+
+paso 9 (/)
+construimos expresion: / E F -----> la devolvemos a la pila
+A - * B C D / E F
+
+paso 10 (G)
+
+A - * B C D / E F G
+
+paso 11 (/)
+construimos expresion / / E F G ----> la devolvemos a la pila
+A - [* B C D] [/ / E F G] // los corchetes son para identificar las expresiones (me pierdo tengo down)
+
+paso 12 (-)
+construimos expresion: - - * B C D / / E F G -----> la devolvemos a la pila
+[A] [- - * B C D / / E F G]
+
+paso 13 (*)
+construimos expresion: * A - - * B C D / / E F G -------> finalizamos
+
+RESULTADO FINAL:  [* A - - * B C D / / E F G]

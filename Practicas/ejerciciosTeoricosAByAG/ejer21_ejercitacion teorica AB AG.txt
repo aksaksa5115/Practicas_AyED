@@ -1,0 +1,16 @@
+21.- Si un árbol general lleno de grado 5 tiene 125 hojas. 
+a) ¿Cuál es la cantidad de nodos internos del árbol? 
+b) Desarrolle el proceso realizado para obtener la respuesta anterior
+
+vamos por partes, la cantidad de hojas de un arbol general lleno se calcula mediante
+I = nodos internos
+L = nodos hojas
+K = grado
+
+L = (k - 1) * I + 1
+a partir de aca sustituimos
+125 = (5 - 1) * I + 1
+125 = 4 * I + 1
+124 = 4 * I
+124 / 4 = I
+I = [31]

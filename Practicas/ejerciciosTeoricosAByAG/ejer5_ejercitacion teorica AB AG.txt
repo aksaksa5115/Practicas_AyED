@@ -1,0 +1,62 @@
+5.- Evalúe la siguiente expresión postfija y determine cuál es el resultado. 
+6 5   *   7   3   −  4   8   +   *   + 
+(a) 78 
+(b) 66 
+(c) 34 
+(d) 44 
+
+PARA RESOLVER ESTOS EJERCICIOS SE SIMULA EL USO DE UNA PILA
+SI ES UN NUMERO, APILAMOS, SI ES UN OPERADOR, EXTRAEMOS LOS ULTIMOS 2 NUMEROS, HACEMOS LA OPERACION Y APILAMOS EL RESULTADO
+(la pila sera en formato horizontal)
+
+paso 1 (6)
+
+6
+
+paso 2 (5)
+
+6 5
+
+paso 3 (*)
+
+30
+
+paso 4 (7)
+
+30 7
+
+paso 5 (3)
+
+30 7 3
+
+paso 6 (-)
+
+30 4
+
+paso 7 (4)
+
+30 4 4 
+
+paso 8 (8)
+
+30 4 4 8
+
+paso 9 (+)
+
+30 4 12
+
+paso 10 (*)
+
+30 48
+
+paso 11 (+)
+
+78
+
+
+RESPUESTA: A) 78
+
+
+
+
+

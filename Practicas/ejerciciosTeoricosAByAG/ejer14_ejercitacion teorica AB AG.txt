@@ -1,0 +1,28 @@
+14.- En un árbol binario lleno, si hay L hojas, entonces el número total de nodos N es: 
+a) N = 2*L 
+b) N = L + 1 
+c) N = L – 1 
+d) N = 2*L – 1 
+
+I = nodos internos
+L = nodos hojas
+N = nodos totales
+
+en un arbol binario lleno, el numero total de nodos siempre es la cantidad de nodos internos mas los nodos hojas
+N = I + L
+sabemos que los nodos internos siempre tendran 2 hijos
+tambien existe la propiedad que la cantidad de hojas, siempre es la cantidad de nodos internos mas 1
+L = I + 1
+esto podemos verlo de otra manera
+I = L - 1
+
+podemos reemplazar L en la formula de N
+
+N = I + (I + 1) = 2I + 1
+y como vimos que podemos reemplazar I
+N = 2(L - 1) + 1
+N = 2L - 2 + 1
+
+[N = 2L - 1]
+
+RESPUESTA: D

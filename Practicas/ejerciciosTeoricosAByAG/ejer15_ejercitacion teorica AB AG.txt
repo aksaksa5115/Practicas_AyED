@@ -1,0 +1,21 @@
+15.- La siguiente figura muestra un árbol general:
+
+no voy a hacer el arbol
+
+dado que se buggea al copiar y pegar, directamente voy a decir que va en cada inciso
+(a) Complete los blancos de las sentencias con la terminología vista en clase. 
+
+i. A 
+ii. A 
+iii. E F 
+iv. E J K L C P Q H N O 
+v. A B F J 3 
+vi. M G D A M N O G H I  
+vii. un camino
+viii. 1 2 P Q  
+ix. 0 F M I 3 
+x. A P/Q). 
+
+supongo que el B se refiere a que ponga lo que imprimiria al realizar el recorrido
+no lo voy a hacer
+
