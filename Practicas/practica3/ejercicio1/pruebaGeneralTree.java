@@ -1,6 +1,7 @@
 package practica3.ejercicio1;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class pruebaGeneralTree {
 
@@ -28,7 +29,15 @@ public class pruebaGeneralTree {
         nodo1.setChildren(Arrays.asList(nodo2, nodo3, nodo4));
         
         int ancho = nodo1.ancho();
-        System.out.println("El ancho del árbol es: " + ancho);  // Debería ser 3 (nivel de nodos 2, 3, 4)
+        //System.out.println("El ancho del árbol es: " + ancho);  // Debería ser 3 (nivel de nodos 2, 3, 4)
+        
+        GeneralTree<String> c = new GeneralTree<>("C");
+        GeneralTree<String> b = new GeneralTree<>("B", List.of(c));
+        GeneralTree<String> a = new GeneralTree<>("A", List.of(b));
+
+        System.out.println(a.esAncestro("A", "C")); // true
+        System.out.println(a.esAncestro("B", "C")); // true
+        System.out.println(a.esAncestro("C", "A")); // false
 
 	}
 

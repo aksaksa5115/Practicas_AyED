@@ -12,6 +12,12 @@ public class AreaEmpresa {
 		this.retardo = (int)(Math.random() * 100) + 1;
 	}
 	
+	public AreaEmpresa(String x, int retardo) {
+		char z = x.charAt(0);
+		this.nombre = z;
+		this.retardo = retardo;
+	}
+	
 	public int getRetardo() {
 		return this.retardo;
 	}

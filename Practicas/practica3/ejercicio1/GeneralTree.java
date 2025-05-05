@@ -136,6 +136,28 @@ public class GeneralTree<T> {
     	
     }
     
+    //------------------EJERCICIO 5-----------------------
+    
+    public boolean esAncestro(T a, T b) {
+    	GeneralTree<T> nodoA = busqueda(this, a);
+    	if (nodoA == null)
+    		return false;
+    	return busqueda(nodoA, b) != null;
+    }
+    
+    private GeneralTree<T> busqueda (GeneralTree<T> ab, T a){
+    	if (ab.getData().equals(a))
+    		return ab;
+    	for (GeneralTree<T> hijos : ab.getChildren()) {
+    		GeneralTree<T> resultado = busqueda(hijos, a);
+    		if (resultado != null) {
+    			return resultado;
+    		}
+    	}
+    	return null;
+    }
+   
+    
     
     
 }
