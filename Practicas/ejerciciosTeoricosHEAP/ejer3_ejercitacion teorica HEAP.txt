@@ -1,0 +1,10 @@
+Dados los siguientes árboles, indique si representan una heap. Justifique su respuesta.
+
+a)	1                       b)          4
+    3       7                           2       7
+          8   9                       1   3   6   9
+
+
+a) no, su ultimo nivel no esta completo de izquierda a derecha
+
+b) si, es un arbol lleno (no se me ocurre que chamuyar para justificar

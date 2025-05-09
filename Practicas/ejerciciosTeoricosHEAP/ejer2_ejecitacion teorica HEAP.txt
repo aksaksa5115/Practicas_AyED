@@ -1,0 +1,21 @@
+a) ¿Cuántos elementos hay, al menos, en una heap de altura h? 
+b) ¿Dónde se encuentra ubicado el elemento mínimo en una max-heap? 
+c) ¿El siguiente arreglo es una max-heap : [23, 17, 14, 6, 13, 10, 1, 5, 7, 12] ?
+
+
+a) ya que una heap es basicamente un arbol completo se respetan las propiedades de la cantidad de nodos 
+   en un arbol binario.
+   entonces la cantidad minima de una heap de altura h va a ser [2^h]
+
+b) como es lo opuesto a una min-heap, el nodo mas pequeño debe estar en las hojas del arbol
+
+c) aca vamos a ver como leer una heap sin tener que dibujar todo el arbolito del orto
+   vos partiendo desde un elemento base, podemos saber que su hijo izquierdo va a estar en la posicion
+   2 * (indice del nodo base) + 1
+   y el hijo derecho va a estar en la posicion 2 * (indice del nodo base) + 2
+   entonces con eso podemos ir chequeando si la max-heap cumple con sus propiedades (el padre debe ser mayor que sus hijos)
+   23 -> 17, 14
+   17 -> 6, 13
+   14 -> 10, 1
+   6 ->  5, 7 <----- rompe la max-heap al no cumplir con la propiedad
+   

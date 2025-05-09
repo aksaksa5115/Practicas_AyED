@@ -1,0 +1,4 @@
+¿Siempre se puede decir que un árbol binario lleno es una Heap? 
+(a)  Sí  
+(b) No
+SI

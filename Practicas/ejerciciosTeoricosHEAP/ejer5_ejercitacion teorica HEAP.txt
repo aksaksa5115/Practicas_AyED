@@ -1,0 +1,67 @@
+A partir de una min-heap inicialmente vacía, dibuje la evolución del estado de la heap al ejecutar las 
+siguientes operaciones: 
+Insert(5), Insert(4), Insert(7), Insert(1), DeleteMin(), Insert(3), Insert(6), DeleteMin(), DeleteMin(), 
+Insert(8), DeleteMin(), Insert(2), DeleteMin(), DeleteMin()  
+
+-----------------------------------------------
+expliquemos el deleteMin antes de arrancar:
+esta funcion consiste en almacenar en una cola el nodo minimo (el primero de la heap), luego se elimina el ultimo elemento
+y se almacena en la raiz, y de ahi se va filtrando hacia abajo hasta re acomodar la heap
+-----------------------------------------------
+Insert (5)
+
+5
+
+Insert (4)
+
+4 5
+
+Insert (7)
+
+4 5 7
+
+Insert (1)
+
+1 4 7 5 
+
+DeleteMin(1)
+
+4 5 7  <----- el 5 paso arriba de todo, pero como es mayor que 4, baja a ser hijo
+
+Insert(3)
+
+3 4 7 5
+
+Insert(6)
+
+3 4 7 5 6
+
+DeleteMin(3)
+
+4 5 7 6 <---- el 6 paso arriba de todo, pero como es mayor que 4 y que 5, termino ultimo de nuevo
+
+DeleteMin(4)
+ 
+5 6 7 <---- el 6 paso arriba de todo, pero como es mayor que 5 baja a ser hijo
+
+Insert(8)
+
+5 6 7 8
+
+DeleteMin(5)
+
+6 8 7 <---- el 8 paso arriba de todo, pero como es mayor que 6, baja a ser hijo
+
+Insert(2)
+
+2 6 7 8
+
+DeleteMin(2)
+
+6 8 7 <---- el 8 paso arriba de todo, pero como es mayor que 6, baja a ser hijo
+
+DeleteMin(6)
+
+7 8 <---- el 7 paso arriba de todo, es menor que 8 asique no hay cambios
+
+

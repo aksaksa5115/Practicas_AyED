@@ -1,0 +1,27 @@
+
+Ejercicio 11 
+a) Ordenar en forma creciente los datos del ejercicio anterior, usando el algoritmo HeapSort. 
+b) ¿Cuáles serían los pasos a seguir si se quiere ordenar en forma decreciente?
+
+a) resumido
+a) heap del ejer 9
+	11 21 27 37 36 34 
+			11
+	21				27
+37		38		34
+----------------------------------------------
+	21 34 27 37 38| 11
+
+			21
+	34			27
+37		38
+----------------------------------------------
+	27 34 38 37| 11 21
+			27
+	34			38
+37
+--------------------------------------------
+el procedimiento es el mismo para todos
+
+b) esa min-heap la vas a tener que convertir a max-heap como puedas
+luego aplicar heap-sort

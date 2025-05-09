@@ -1,0 +1,19 @@
+Dibuje todas las min-heaps posibles para este conjunto de claves: {A, B, C, D, E} 
+---------------------------
+		A
+	B		C
+D		E
+---------------------------
+		A
+	B		C
+E		D
+---------------------------		
+		A
+	C		B
+D		E
+---------------------------
+		A
+	C		B
+E		D
+---------------------------
+se podria seguir reemplazando y cambiando lugares, pero que paja 
