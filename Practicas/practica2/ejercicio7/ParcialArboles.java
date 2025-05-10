@@ -67,7 +67,8 @@ public class ParcialArboles {
         
         ParcialArboles parcial = new ParcialArboles(ab);
         
-        System.out.println("Resultado=" + parcial.isLeftTree(7));
+        System.out.println("Resultado=" + parcial.isLeftTree(10));
+        System.out.println("-----------------------------------");
         System.out.println("Resultado=" + parcial.isLeftTree(2));
         System.out.println("Resultado=" + parcial.isLeftTree(-5));
         System.out.println("Resultado=" + parcial.isLeftTree(19));
